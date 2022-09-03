@@ -1,0 +1,19 @@
+<div style="backgroundColor: dimgray;">
+
+  <body class="flex-col sm:w-6/12 m-auto text-center 
+      h-screen bg-gradient-to-b from-gray-300 to-gray-400">
+
+  <!-- Imput Search query -->
+    <p>
+      <input type="text" name="name" ngModel (ngModelChange)="showMessages($event)"
+      class="bg-slate-100 p-1" placeholder="Search input..">
+    </p>
+
+  <!-- Search results -->  
+    <ul class="bg-slate-200 p-2"> 
+      <li *ngFor="let temp of searchResults; index as i"> {{i+1}} - {{temp.title}}  </li>
+    </ul>
+
+  </body>
+
+</div>
