@@ -15,6 +15,7 @@ export class AppComponent {
   
   searchResults: Array<Item> = [];
 
+  // DEV will use here public? or @Output() 
   queryInput: string = '';  
 
   showMessages(arg: string) {
@@ -23,6 +24,8 @@ export class AppComponent {
       { "q": `${arg}` })
       .subscribe(meiliResponse => {
         this.searchResults = meiliResponse.hits;
+
+        this.queryInput = arg;
        }) // end of sub
    } // end of showMessages
 } // end of class AppComponent

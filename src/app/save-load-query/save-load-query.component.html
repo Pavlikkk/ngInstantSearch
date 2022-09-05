@@ -1,0 +1,14 @@
+<p>***</p>
+
+<!-- END OF DEV save load query -->
+<p> <strong>from query.component: </strong> {{saveQuery}} </p>
+<!-- END OF DEV save load query -->
+
+<!-- iterate trought initialState from store\save-load-query.reducer.ts -->
+<ul class="bg-slate-200 p-2"> 
+    <li *ngFor="let temp of (savedQueries$ | async)?.Queries; index as i"> {{i+1}} - {{temp}}  </li>
+</ul>
+
+<p>***</p>
+
+<button class="bg-blue-600 text-white text-lg p-2 rounded-md" (click)="onSaveQuery()">SAVE</button>

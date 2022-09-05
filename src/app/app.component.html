@@ -3,6 +3,14 @@
   <body class="flex-col sm:w-6/12 m-auto text-center 
       h-screen bg-gradient-to-b from-gray-300 to-gray-400">
 
+      <!-- output the {{queryInput}} from ..query.component -->
+      <app-save-load-query [saveQuery]="queryInput"></app-save-load-query>
+      <!-- DEV save load query -->
+      <p>
+      <em>fromAPP.COMPONENT: </em> {{queryInput}}
+      </p>
+      <!-- END OF DEV save load query -->
+
   <!-- Imput Search query -->
     <p>
       <input type="text" name="name" ngModel (ngModelChange)="showMessages($event)"
